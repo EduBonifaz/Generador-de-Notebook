@@ -1,0 +1,9 @@
+Descargar Datos filtrando por país Perú:
+https://bbva-nhg.appspot.com/objects
+https://bbva-nhg.appspot.com/fields
+
+Descargar los CSV que les llegara a sus respectivos correos.
+Guardar los archivos en la Carpeta DATUM con los nombres:
+
+Objects.csv
+Fields.csv
