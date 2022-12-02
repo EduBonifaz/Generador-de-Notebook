@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 
 Objetos = r'./Datum/Objects.csv'
 Campos = r'./Datum/Fields.csv'
@@ -309,7 +310,7 @@ for item,row in Tablas_df.iterrows():
 "nbformat": 4,
 "nbformat_minor": 4
 }"""
-
+		os.makedirs('./Output', exist_ok=True)
 		f = open (f'./Output/{row["TABLA MASTER"]} - Reliability.ipynb','w', encoding='utf-8')
 		f.write(Notebook)
 		f.close()
