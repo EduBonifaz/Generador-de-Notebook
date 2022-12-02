@@ -11,6 +11,7 @@ Objetos_df = pd.read_csv(Objetos ,sep=';',dtype = 'object')[["Physical name obje
 Campos_df = pd.read_csv(Campos ,sep=';',dtype = 'object')[["Physical Name field","Key","Physical name object","Logical Format","Storage Zone"]]
 
 for item,row in Tablas_df.iterrows():
+
 	if row["TABLA MASTER"] == row["TABLA MASTER"]:
 		CamposMaster = Campos_df[(Campos_df["Physical name object"]==row["TABLA MASTER"]) & (Campos_df["Storage Zone"]=="MASTERDATA")]
 		TablaMaster_df = Objetos_df[(Objetos_df["Physical name object"]==row["TABLA MASTER"]) & (Objetos_df["Storage Zone"]=="MASTERDATA")]
@@ -311,7 +312,10 @@ for item,row in Tablas_df.iterrows():
 "nbformat_minor": 4
 }"""
 		os.makedirs('./Output', exist_ok=True)
-		f = open (f'./Output/{row["TABLA MASTER"]} - Reliability.ipynb','w', encoding='utf-8')
+		Raw = ""
+		if row["TABLA RAW"] == row["TABLA RAW"]:
+			Raw = f' - {row["TABLA RAW"]}'
+		print(f'Creando: {row["TABLA MASTER"]}{Raw}.ipynb')
+		f = open (f'./Output/{row["TABLA MASTER"]}{Raw}.ipynb','w', encoding='utf-8')
 		f.write(Notebook)
 		f.close()
-
