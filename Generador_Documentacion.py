@@ -4,7 +4,7 @@ import os
 Objetos = r'./Datum/Objects.csv'
 Campos = r'./Datum/Fields.csv'
 
-Input_Tablas = r'./Input_Tablas.xlsx'
+Input_Tablas = r'./Input_Tablas.xls'
 Tablas_df = pd.read_excel(Input_Tablas, sheet_name='TABLA', dtype = 'object', usecols="A:B")
 cutoff_value = pd.read_excel(Input_Tablas, sheet_name='TABLA', dtype = 'object', usecols="D").dropna()["cutoffDate"].tolist()
 Objetos_df = pd.read_csv(Objetos ,sep=';',dtype = 'object')[["Physical name object","Description object","Partitions","physical path","Storage Zone","Storage Type"]]
