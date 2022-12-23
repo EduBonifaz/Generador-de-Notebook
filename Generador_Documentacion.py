@@ -287,7 +287,49 @@ for item,row in Tablas_df.iterrows():
 		"## Campos Llave: No Posee"
 		]
 		}"""
-		Notebook += r"""
+		Notebook += r""",
+		{
+		"cell_type": "markdown",
+		"metadata": {},
+		"source": [
+		"#### Caida de Reglas_"
+		]
+		},
+	  {
+	    "cell_type": "code",
+	    "source": [
+	      "#3.2 FormatValidationRule\n",
+	      "#Columna =\n",
+	      "#exp =\n",
+	      "#masterDF.filter(~col(Columna).rlike(exp)).groupBy(col(Columna)).count().show()"
+	    ],
+	    "metadata": {},
+	    "execution_count": null,
+	    "outputs": []
+	  },
+	  {
+	    "cell_type": "code",
+	    "source": [
+	      "#3.5 StaticCatalogRule\n",
+	      "#Columna =\n",
+	      "#values =\n",
+	      "#masterDF.filter(~col(Columna).isin(values)).groupBy(col(Columna)).count().show()"
+	    ],
+	    "metadata": {},
+	    "execution_count": null,
+	    "outputs": []
+	  },
+	  {
+	    "cell_type": "code",
+	    "source": [
+	      "#4.2 DuplicateRule\n",
+	      "#Columnas=[]\n",
+	      "#masterDF.groupBy(Columnas).count().filter(col(\"count\")>1).show()"
+	    ],
+	    "metadata": {},
+	    "execution_count": null,
+	    "outputs": []
+	  }
   ],
 "metadata": {
 	"kernelspec": {
