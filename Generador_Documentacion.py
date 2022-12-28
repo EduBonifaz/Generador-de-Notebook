@@ -157,6 +157,7 @@ for item,row in Tablas_df.iterrows():
   }"""
 
 
+		CamposLlavesMaster = CamposLlavesMaster.drop_duplicates()
 		if len(CamposLlavesMaster)>0:
 
 			Notebook += r""",
